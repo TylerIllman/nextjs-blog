@@ -13,10 +13,20 @@ export async function getStaticProps() {
   };
 }
 
-export default function Home({ allPostsData }) {
+export default function Home({allPostsData}) {
+  
   return (
     <Layout home>
-      {/* Keep the existing code here */}
+      <Head>
+        <title>{siteTitle}</title>
+      </Head>
+      <section className={utilStyles.headingMd}>
+        <p>Hey I'm Tyler and I love building 🏗️ stuff! Checkout some of the stuff I have built in this blog. I even built this blog using next.js.</p>
+        <p>
+          If you'd also like to build a similar blog you can do so{' '}
+          <a href="https://nextjs.org/learn">here</a>.
+        </p>
+      </section>
 
       {/* Add this <section> tag below the existing <section> tag */}
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
